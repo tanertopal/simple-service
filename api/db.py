@@ -14,4 +14,11 @@
 # ==============================================================================
 """Database module."""
 
-import psycopg2
+from sqlalchemy import create_engine
+
+host = "localhost"
+user = "postgres"
+password = "postgres"
+db_name = "users"
+
+engine = create_engine(f"postgresql://{user}:{password}@{host}/{db_name}")
